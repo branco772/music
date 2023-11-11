@@ -16,7 +16,7 @@ const cancionSchema = new Schema({
   artista:{
     type:String,
     trim:true,
-    required:[true,"El nombre del artista es obligatorio"]
+    required:[true,"El nombre del artista es obligatorio"]  
   },
   visible:{
     type:Boolean,
