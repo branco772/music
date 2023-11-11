@@ -12,16 +12,14 @@ function NavBar(){
                     <div>
                         <div className="flex items-center justify-between py-3 md:py-5 md:block">
                             {/*LOGO*/}
-                            <Link href="/">
-                                <h2 className="text-2x1 text-cyan-600 font-bold">MUSIC</h2>
-                            </Link>
+                            <Image src="/musicLogo.jpg" width={130} height={130} alt="logo"/>
                             {/*BOTON HAMBURGUESA*/}
                             <div className="md:hidden">
                                 <button className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border" onClick={()=> setNavBar(!navbar)}>
                                     {navbar ? (
-                                        <Image src={close} width={30} height={30} alt="logo"/>
+                                        <Image src="/close.svg" width={30} height={30} alt="logo"/>
                                     ):(
-                                        <Image src="/public/hamburger-menu.svg" width={30} height={30} alt="logo" className="focus:border-none active:border-none"/>
+                                        <Image src="/hamburger-menu.svg" width={30} height={30} alt="logo" className="focus:border-none active:border-none"/>
                                     )}
                                 </button>
                             </div>
@@ -31,7 +29,7 @@ function NavBar(){
                         <div
                             className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? 'p-12 md:p-0 block' : 'hidden'}`}>
                             <ul className="h-screen md:h-auto items-center justify-center md:flex">
-                                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                                <li className="hover:underline pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
                                     <Link href="#inicio" onClick={()=>setNavBar(!navbar)}>
                                         Inicio
                                     </Link>
