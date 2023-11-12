@@ -1,22 +1,23 @@
 import mongoose from 'mongoose';
 const { Schema,model,models } = mongoose;
 const pedidoSchema = new Schema({
-  titulo:{
+  detalle:{
     type:String,
     unique:true,
     trim:true,
-    required:[true,"El titulo es obligatorio"]
+    required:[true,"El detalle es obligatorio"]
   },
-  imagen:{
+  nombre:{
     type:String,
     trim:true,
     required:[true,"Imagen Obligatoria"],
     default:'#'
   },
-  artista:{
+  pago:{
     type:String,
     trim:true,
-    required:[true,"El nombre del artista es obligatorio"]  
+    required:[true,"Pago Obligatoria"],
+    default:'0'
   },
   visible:{
     type:Boolean,
@@ -32,4 +33,4 @@ const pedidoSchema = new Schema({
 }
 );
 
-export default models.Cancion || model('Cancion',pedidoSchema);  
+export default models.Pedido || model('Pedido',pedidoSchema);  
