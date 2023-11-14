@@ -3,7 +3,8 @@ import { getServerSession } from 'next-auth';
 import NavBar from '../../components/navBar';
 import { authOptions } from './api/auth/[...nextauth]/route';
 import User from './components/user';
-import client from './libs/prismadb';
+// import client from './libs/prismadb';
+
 
 export default async function Home() {
   const session = await getServerSession(authOptions)
