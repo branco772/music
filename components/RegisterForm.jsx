@@ -60,26 +60,34 @@ export default function RegisterForm () {
         }
       };
     return  <div className="grid place-items-center h-screen">
-    <div className="shadow-lg p-5 rounded-lg border-t-4 border-green-400">
-      <h1 className="text-xl font-bold my-4">Registrarse</h1>
+<div
+className="shadow-lg p-5 rounded-lg border-t-4 border-purple-500 mx-auto w-full max-w-md"
+>      <h1 className="text-xl font-bold my-4">Registrarse</h1>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
       <input
           onChange={(e) => setName(e.target.value)}
           type="text"
           placeholder="Nombre Completo"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+
         />
         <input
           onChange={(e) => setEmail(e.target.value)}
           type="text"
           placeholder="Correo Electronico"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+
         />
         <input
          onChange={(e) => setPassword(e.target.value)}
           type="password"
           placeholder="Password"
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+
         />
-        <button className="bg-green-600 text-white font-bold cursor-pointer px-6 py-2">
+        <button className="bg-violet-600 text-white font-bold cursor-pointer px-6 py-2 hover:bg-violet-700 transition-colors">
+
           Registrarse
         </button>
         { error &&(
