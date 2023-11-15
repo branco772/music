@@ -6,7 +6,7 @@ export default function GET(){
     return(
         <div>
             <NavBar/>
-            <main class="pt-60 grid place-items-center min-h-screen bg-gradient-to-t from-blue-200 to-indigo-900 p-5">
+            <main class="pt-60 grid grid-cols-3 place-items-center min-h-screen bg-gradient-to-t from-blue-200 to-indigo-900 p-5">
             <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold text-gray-200 mb-5">Hecho para ti</h1>
             <div class="bg-gray-900 shadow-lg rounded p-3">
                 <div class="group relative">
