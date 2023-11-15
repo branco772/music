@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-'use client'
->>>>>>> 442f0db594a2c7ae896a3360c62cfb39d0c0ff29
 import NavBar from '../../components/navBar';
 import LoginForm from '../../components/LoginForm';
 import { getServerSession } from "next-auth";
