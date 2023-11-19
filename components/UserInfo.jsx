@@ -2,6 +2,7 @@
 import  {signOut } from "next-auth/react"
 import { FaUser } from 'react-icons/fa';
 import { useSession } from "next-auth/react";
+import Link from "next/link";
 
 export default function UserInfo(){
     const { data: session } = useSession();
@@ -17,7 +18,7 @@ export default function UserInfo(){
                 Correo: <span className="font-bold">{session?.user?.email}</span>
                 </div>
                 <button 
-                onClick={()=> signOut ()}
+                onClick={()=> signOut ( )}
                 className='bg-red-500 text-white font-bold px-6 py-2 mt-3'>
                     Salir
                 </button>
