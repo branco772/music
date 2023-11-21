@@ -16,9 +16,9 @@ function HomePage ({params}){
 
     const getCancion = async ()=>{
         const res = await fetch(`/api/cancion/${params.id}`);
-        const {canciones} = await res.json();
+        const canciones = await res.json();
         console.log(canciones);
-        setNewMateria({
+        setNewCancion({
             titulo:canciones.titulo,
             imagen:canciones.imagen,
             artista:canciones.artista,
@@ -33,7 +33,7 @@ function HomePage ({params}){
                 const res=await fetch(`/api/cancion/${params.id}`,{
                     method:"DELETE"
                 })
-                router.push('/cancion');
+                router.push('/tienda');
                 router.refresh(); 
             } catch (error) {
                 console.log(error)

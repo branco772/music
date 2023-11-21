@@ -53,7 +53,7 @@ function page() {
                     <span className="ms-3 text-xl font-medium text-gray-900 dark:text-gray-300">Visible</span>
                     </label>
                     <input type="number" name="orden" placeholder="asignar un orden 1,2,3,4" className="bg-gradient-to-r from-green-100 via-purple-300 to-purple-900 text-lg rounded-2xl  w-full  p-4  my-2" onChange={handlerChange}/>
-                    <button type="submit" className="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 my-2" >Registrar Materia</button>
+                    <button type="submit" className="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 my-2" >Registrar Cancion</button>
                 </form>
             </div>
         </div>

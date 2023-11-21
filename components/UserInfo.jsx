@@ -24,7 +24,7 @@ export default function UserInfo(){
                 </button>
                 <br />
                 <button className='bg-blue-500 text-white font-bold px-6 py-2 mt-3'>
-                    Moidificar
+                    Modificar
                 </button>
             </div>
         </div>
