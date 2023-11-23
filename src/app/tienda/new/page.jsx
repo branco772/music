@@ -56,7 +56,6 @@ function page() {
         console.log(e.target.files[0])
         setCancion({...cancion,[e.target.name]:e.target.files[0]})
     }
-//(e) => setCancion(e.target.files[0])
     return (
         <div>
             <NavBar/>
