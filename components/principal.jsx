@@ -1,17 +1,7 @@
-import NavBar from '../../components/navBar';
-import LoginForm from '../../components/LoginForm';
-import { getServerSession } from "next-auth";
-import { redirect } from "next/navigation";
-import { authOptions } from "./api/auth/[...nextauth]/route";
-
-
-export default async function Home() {
-  const session= await getServerSession(authOptions);
-  if (session){
-    return redirect('/dashboard')
-  }
-  /*return (
-    <div className='bg-gradient-to-r from-blue-500 via-purple-600 to-blue-700'>
+import NavBar from '../components/navBar';
+function Principal(){
+    return(
+        <div className='bg-gradient-to-r from-blue-500 via-purple-600 to-blue-700'>
       <NavBar />
       <div>
         <h1 className='mt-32 p-5 font-black text-6xl'>Recomendados</h1>
@@ -194,6 +184,6 @@ export default async function Home() {
       {/* <section id="miPerfil" className=" text-white h-screen bg-purple-900 flex">
           <h1 className="m-auto font-waterfall text-7xl text-white font-bold">REGISTRATE</h1>
       </section> */}
-    /*</div>*/
-  /*)*/
-
+    </div>
+    )
+}
