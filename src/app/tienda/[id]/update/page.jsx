@@ -66,7 +66,7 @@ function HomePage ({params}){
 
     const handlerImage=(e)=>{
         console.log(e.target.files[0])
-        setNewCancion({...cancion,[e.target.name]:e.target.files[0]})
+        setNewCancion({...newCancion,[e.target.name]:e.target.files[0]})
     }
     useEffect(()=>{
         getCancion()

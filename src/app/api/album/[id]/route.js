@@ -1,21 +1,22 @@
+
 import { NextResponse } from "next/server";
 import {connectDB} from '@/libs/mongoose';
-import Canciones from '@/models/cancion';
+import Albumes from '@/models/album';
 
 export async function GET(request,{params}){
     try {
         await connectDB();
         const id = params.id;
-        const canciones= await Canciones.findById(id);
+        const albumes= await Albumes.findById(id);
 
-        if(!canciones){
+        if(!albumes){
             return NextResponse({
-                mensaje:"Cancion no encontrada"
+                mensaje:"Album no encontrada"
             },{status:400})
         }
 
         return NextResponse.json({
-        canciones
+        albumes
         })
     } catch (error) {
         console.log(error)
@@ -29,16 +30,16 @@ export async function DELETE(request,{params}){
         await connectDB();
         const id = params.id;
         console.log(id);
-        const canciones= await Canciones.deleteOne({'_id':id});
+        const albumes= await Albumes.deleteOne({'_id':id});
         
-        if(!canciones){
+        if(!albumes){
             return NextResponse({
-                mensaje:"Cancion no encontrada"
+                mensaje:"Album no encontrada"
             },{status:400})
         }
 
         return NextResponse.json({
-        canciones
+        albumes
         })
     } catch (error) {
         console.log(error)
@@ -53,17 +54,17 @@ export async function PUT(request,{params}){
         await connectDB();
         const data = await request.json();
         const id = params.id; 
-        const cancionUpdated=await Canciones.findByIdAndUpdate(id,data,{new:true});
+        const albumUpdated=await Albumes.findByIdAndUpdate(id,data,{new:true});
         
-        if(!cancionUpdated){
+        if(!albumUpdated){
             return NextResponse({
 
-                mensaje:"Cancion no encontrada"
+                mensaje:"Album no encontrada"
             },{status:400})
         }
 
         return NextResponse.json({
-            cancionUpdated 
+            albumUpdated 
         })
     } catch (error) {
         console.log(error)
