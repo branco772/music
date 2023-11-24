@@ -12,10 +12,10 @@ export default async function Home() {
   }
   return (
     <div className='bg-gradient-to-r from-blue-500 via-purple-600 to-blue-700'>
-      <NavBar />
-    <div>
-        <Principal />
-    </div>
+      <NavBar/>
+      <div>
+        <Principal/>
+      </div>
     </div>
   )
 }

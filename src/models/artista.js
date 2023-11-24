@@ -24,4 +24,4 @@ const artistaSchema = new Schema({
 }
 );
 
-export default models.Cancion || model('Cancion',artistaSchema);  
+export default models.Artista || model('Artista',artistaSchema);  
