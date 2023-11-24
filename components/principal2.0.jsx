@@ -2,7 +2,6 @@ import NavBar from './navBar';
 function Principal(){
     return(
         <div className='bg-gradient-to-r from-blue-500 via-purple-600 to-blue-700'>
-      <NavBar />
       <div>
         <h1 className='mt-32 p-5 font-black text-6xl'>Recomendados</h1>
         <div className="grid grid-cols-3 place-items-center max-h-screen">
