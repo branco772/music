@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-const { Schema,model,models } = mongoose;
+const { Schema,model,models, ObjectId } = mongoose;
 const cancionSchema = new Schema({
   titulo:{
     type:String,
@@ -25,6 +25,26 @@ const cancionSchema = new Schema({
   orden:{
     type:Number,
     default:0
+  },
+  album:{
+    type:ObjectId,
+    ref:'Album'
+  },
+  artistas:{
+    type:ObjectId,
+    ref:'Artista'
+  },
+  user:{
+    type:ObjectId,
+    ref:'User'
+  },
+  pedido:{
+    type:ObjectId,
+    ref:'Pedido'
+  },
+  compra:{
+    type:ObjectId,
+    ref:'Compra'
   }
 },
 {

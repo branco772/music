@@ -48,9 +48,9 @@ function HomePage ({params}){
     },[])
 
 return(
-    <div>
+    <div className="bg-white text-black">
         <h1>{params.id}</h1>
-            <h1>Eliminar: {newCancion.titulo}</h1>
+            <h1 className="text-black">Eliminar: {newCancion.titulo}</h1>
             <button type="button" className="bg-red-500 px-3 py-1 rounded-md" 
                 onClick={handleDelete}>
                     Eliminar Cancion
