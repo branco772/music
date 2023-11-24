@@ -1,6 +1,6 @@
 // pages/api/profile.js
 import { getSession } from 'next-auth/react';
-import { connectMongoDB, updateUser } from '../../../lib/mongodb';
+import { connectMongoDB, updateUser } from '../../../../lib/mongodb';
 
 export default async function handler(req, res) {
   if (req.method !== 'PUT') {
