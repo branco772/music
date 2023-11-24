@@ -23,7 +23,7 @@ export default function ProfilePage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('/src/app/api/profile', {
+    const response = await fetch('http://localhost:3000/api/profile', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, password }),
