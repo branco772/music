@@ -1,6 +1,5 @@
-
 import NavBar from '../../../components/navBar3.0';
-import Sidebar from '../../../components/Sidebar';
+import Sidebar from '../../../components/Sidebar'; // Importa el componente Sidebar
 import Principal from '../../../components/principal2.0';
 
 export default function Dashboard() {
@@ -11,7 +10,7 @@ export default function Dashboard() {
         <main style={{ flex: 1 }}>
           <Principal />
         </main>
-        <Sidebar />
+        <Sidebar /> {/* Usa el componente Sidebar aquí */}
       </div>
     </div>
   );

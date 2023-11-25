@@ -2,10 +2,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { FaUser } from 'react-icons/fa';
+import { FaUser, FaShoppingCart } from 'react-icons/fa';
 import UserInfo from "./UserInfo"
+import Sidebar from "./Sidebar"; // Import your Sidebar component
+
 function NavBar(){
     const [navbar, setNavBar]=useState(false);
+    const [cartOpen, setCartOpen]=useState(false); // New state for cart sidebar
+
     return(
         <div>
             <nav className="w-full bg-black fixed top-0 left-0 right-0 z-10">
@@ -24,6 +28,10 @@ function NavBar(){
                                     )}
                                 </button>
                             </div>
+                            {/*CART BUTTON*/}
+                            {/* <button onClick={() => setCartOpen(!cartOpen)}>
+                                <FaShoppingCart />
+                            </button> */}
                         </div>
                     </div>
                     <div>
@@ -39,13 +47,33 @@ function NavBar(){
                                     <Link href="/tiendaUser" onClick={() => setNavBar(!navbar)}>
                                         Tienda
                                     </Link>
-                                </li>                                    
-                                    <UserInfo />     
-                            </ul>
+                                </li>      
+                                <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                                    <Link href="/album" onClick={() => setNavBar(!navbar)}>
+                                        Albumes
+                                    </Link>
+                                </li>
+                                <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                                    <Link href="/artista" onClick={() => setNavBar(!navbar)}>
+                                        Artista
+                                    </Link>
+                                </li>
+                                <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                                    <Link href="/pedido" onClick={() => setNavBar(!navbar)}>
+                                        pedidos
+                                    </Link>
+                                </li>                              
+                                <UserInfo />  
+                                <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                                    <Link href="#" onClick={() => setCartOpen(!cartOpen)}>
+                                    <FaShoppingCart size={30} />
+                                    </Link>
+                                </li>                                                                </ul>
                         </div>
                     </div>
                 </div>
             </nav>
+            {cartOpen && <Sidebar open={cartOpen} />} {/* Show Sidebar when cartOpen is true */}
         </div>
     );
 }
